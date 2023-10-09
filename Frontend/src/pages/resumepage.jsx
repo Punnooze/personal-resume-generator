@@ -436,17 +436,27 @@ function Resume() {
           doc.text(addressLines.join(', '), 20, 60);
         }
 
+        // if (education.length > 0) {
+        //   doc.setFontSize(16);
+        //   doc.text('Education', 20, 80);
+        //   doc.setFontSize(12);
+        //   education.forEach((edu, index) => {
+        //     console.log(edu.duration);
+        //     doc.text(`${edu.duration} - ${edu.name}`, 20, 90 + index * 20);
+        //     doc.text(edu.institute, 30, 100 + index * 20);
+        //     doc.text(edu.degree, 30, 110 + index * 20);
+        //     doc.text(edu.percentage, 30, 120 + index * 20);
+        //     doc.text(edu.passingYear, 30, 130 + index * 20);
+        //   });
+        // }
+
         if (education.length > 0) {
           doc.setFontSize(16);
           doc.text('Education', 20, 80);
           doc.setFontSize(12);
           education.forEach((edu, index) => {
-            console.log(edu.duration);
-            doc.text(`${edu.duration} - ${edu.name}`, 20, 90 + index * 20);
-            doc.text(edu.institute, 30, 100 + index * 20);
-            doc.text(edu.degree, 30, 110 + index * 20);
-            doc.text(edu.percentage, 30, 120 + index * 20);
-            doc.text(edu.passingYear, 30, 130 + index * 20);
+            const eduInfo = `${edu.duration} - ${edu.name}\n${edu.institute}\n${edu.degree}\n${edu.percentage}\n${edu.passingYear}`;
+            doc.text(eduInfo, 20, 90 + index * 80); // Adjust the Y-coordinate as needed
           });
         }
 
@@ -459,17 +469,27 @@ function Resume() {
           });
         }
 
+        // if (projects.length > 0) {
+        //   doc.setFontSize(16);
+        //   doc.text('Projects', 20, 250);
+        //   doc.setFontSize(12);
+        //   projects.forEach((project, index) => {
+        //     doc.text(
+        //       `${project.name} ${project.duration}`,
+        //       20,
+        //       260 + index * 20
+        //     );
+        //     doc.text(project.description, 30, 270 + index * 20);
+        //   });
+        // }
+
         if (projects.length > 0) {
           doc.setFontSize(16);
-          doc.text('Projects', 20, 250);
+          doc.text('Projects', 20, 200);
           doc.setFontSize(12);
           projects.forEach((project, index) => {
-            doc.text(
-              `${project.name} ${project.duration}`,
-              20,
-              260 + index * 20
-            );
-            doc.text(project.description, 30, 270 + index * 20);
+            const projectInfo = `${project.name} ${project.duration}\n${project.description}`;
+            doc.text(projectInfo, 20, 210 + index * 80); // Adjust the Y-coordinate as needed
           });
         }
 
