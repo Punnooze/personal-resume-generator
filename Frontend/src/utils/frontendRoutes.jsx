@@ -1,4 +1,4 @@
-export const host = 'http://localhost:3001';
+export const host = 'https://resume-generator-oms0.onrender.com';
 export const addressRoute = `${host}/api/address`;
 export const personalRoute = `${host}/api/personal`;
 export const educationRoute = `${host}/api/education`;
@@ -8,4 +8,3 @@ export const projectsRoute = `${host}/api/projects`;
 export const skillsRoute = `${host}/api/skills`;
 export const getResumeRoute = `${host}/api/getSelected`;
 export const checkResumeRoute = `${host}/api/check`;
-
