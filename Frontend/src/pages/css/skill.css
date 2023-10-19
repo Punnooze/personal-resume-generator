@@ -38,3 +38,11 @@
 {
   margin:10px;
 }
+
+body
+{
+  background: linear-gradient(to bottom right, #c2e59c, #64b3f4);
+  max-height: 100%;
+  width: 100vw;
+  min-height: 85vh
+}
