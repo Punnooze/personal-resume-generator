@@ -17,9 +17,12 @@ const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const session = require('express-session');
 const bodyParser = require('body-parser');
 
+
+
+
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000','http://resume-generator-mic.netlify.app'],
     credentials: true,
   })
 );
@@ -92,7 +95,7 @@ app.get(
     // Redirect to the /login page after successful authentication
     const query = new URLSearchParams(userdata).toString();
     // res.redirect('/');
-    res.redirect(`http://localhost:3000/home?${query}`);
+    res.redirect(`http://resume-generator-mic.netlify.app/home?${query}`);
   }
 );
 
@@ -105,7 +108,7 @@ app.get('/logout', (req, res) => {
       if (err) {
         console.log(err);
       }
-      res.redirect('http://localhost:3000/'); // Redirect to the login page
+      res.redirect('http://resume-generator-mic.netlify.app/'); // Redirect to the login page
     });
   });
 });
