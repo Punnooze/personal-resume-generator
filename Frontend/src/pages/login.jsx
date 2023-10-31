@@ -10,7 +10,7 @@ function Login() {
   // }
 
   const handleLogin = () => {
-    window.location.href = 'http://localhost:3001/auth/google';
+    window.location.href = 'https://resume-generator-oms0.onrender.com/auth/google';
   };
 
   return (
