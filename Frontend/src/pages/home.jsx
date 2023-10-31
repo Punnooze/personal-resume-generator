@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import './css/home.css';
 
 function Home() {
-
-
   const location = useLocation();
   const user = queryString.parse(location.search);
 
@@ -17,14 +15,12 @@ function Home() {
     console.log(user);
   }, []);
 
-
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    window.location.href = 'http://localhost:3001/logout';
+    window.location.href = 'https://resume-generator-oms0.onrender.com/logout';
   };
   const createresume = async () => {
-    
     navigate('/personal');
   };
 
@@ -49,7 +45,10 @@ function Home() {
           </div>
         </div>
         <div className="x">
-          <div className="card" onClick={() => console.log("Update Resume clicked")}>
+          <div
+            className="card"
+            onClick={() => console.log('Update Resume clicked')}
+          >
             <img
               src="https://resumegenius.com/wp-content/uploads/update-resume-1.png"
               className="card-img-top"
